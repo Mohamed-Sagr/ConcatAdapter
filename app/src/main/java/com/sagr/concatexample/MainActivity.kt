@@ -1,14 +1,7 @@
 package com.sagr.concatexample
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import android.view.Menu
-import android.view.MenuItem
 import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sagr.concatexample.adapter.BannerAdapter
@@ -19,14 +12,12 @@ import com.sagr.concatexample.model.MyDetail
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
     private lateinit var adapter: ConcatAdapter
     private lateinit var myDetailAdapter: MyDetailAdapter
     private lateinit var userVerticalAdapter: UsersAdapter
     private lateinit var bannerAdapter: BannerAdapter
 
-    // Sample data for myDetail
     private val myDetail = listOf(
         MyDetail(1, "Himanshu Singh", "I am a writer and Open Source contributor in MindOrks."),
         MyDetail(2, "John Doe", "A passionate Android developer."),
